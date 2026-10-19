@@ -1,162 +1,236 @@
+<div align="center">
+
 # 🛒 E-Commerce Sales Analysis
 
-> **An end-to-end data analytics project uncovering sales performance, customer behavior, and revenue drivers through Python and Power BI.**
+### 🚀 Turning Raw Sales Data into Business Intelligence with Python & Power BI
 
-<p align="left">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas"/>
-  <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" alt="Power BI"/>
-  <img src="https://img.shields.io/badge/Data_Analysis-4CAF50?style=for-the-badge&logo=databricks&logoColor=white" alt="Data Analysis"/>
-</p>
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+[![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
+[![Matplotlib](https://img.shields.io/badge/Matplotlib-11557c?style=for-the-badge&logo=python&logoColor=white)](https://matplotlib.org/)
+[![Seaborn](https://img.shields.io/badge/Seaborn-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://seaborn.pydata.org/)
+[![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)](https://powerbi.microsoft.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
----
+**An end-to-end analytics pipeline that cleans, analyzes, and visualizes e-commerce sales data — then delivers insights through an interactive Power BI dashboard.**
 
-## 📌 Table of Contents
-- [Project Overview](#-project-overview)
-- [Business Objective](#-business-objective)
-- [Dataset](#-dataset)
-- [Repository Structure](#-repository-structure)
-- [Tools & Technologies](#-tools--technologies)
-- [Analysis Workflow](#-analysis-workflow)
-- [Key Insights](#-key-insights)
-- [Power BI Dashboard](#-power-bi-dashboard)
-- [How to Use](#-how-to-use)
-- [Connect with Me](#-connect-with-me)
+[Overview](#-overview) • [Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [How It Works](#-how-it-works) • [Output](#-output) • [Contact](#-contact)
+
+</div>
 
 ---
 
-## 📖 Project Overview
+## 📖 Overview
 
-This project delivers a **comprehensive analysis of e-commerce sales data**, transforming raw transactional records into actionable business intelligence. The workflow combines a **reproducible Python pipeline** for data cleaning and exploratory analysis with an **interactive Power BI dashboard** for stakeholder-facing reporting.
+> *"Raw e-commerce data is messy. It contains missing values, duplicate orders, inconsistent product names, and extreme outliers that hide the real story."*
 
-The goal is to move beyond basic reporting and answer the questions that matter: *Where is revenue coming from? Which products and regions drive growth? And how can the business optimize its strategy?*
+This project solves that problem. It **automatically cleans** transactional sales data, **performs exploratory data analysis (EDA)**, **engineers business KPIs**, and **exports everything** into a Power BI dashboard for interactive reporting.
 
----
-
-## 🎯 Business Objective
-
-The analysis is designed to address the following business questions:
-
-- **Revenue Performance:** What are the overall sales trends and growth patterns?
-- **Product Analysis:** Which products and categories are top performers vs. underperformers?
-- **Customer Behavior:** Who are the most valuable customers, and how do purchasing patterns vary?
-- **Regional Insights:** Which markets contribute most to revenue?
-- **Profitability:** Where are the margins strongest, and where is the business losing money?
+| 🎯 Goal | ✅ Result |
+|:--------|:---------|
+| Clean transactional data | No duplicates, no broken fields |
+| Analyze sales performance | Revenue, profit, trends, categories |
+| Understand customers | Segmentation by value and behavior |
+| Visualize insights | Python charts + Power BI dashboard |
+| Save clean output | `cleaned_ecommerce_data.csv` ready for BI |
 
 ---
 
-## 📊 Dataset
+## ✨ Features
 
-- **Source:** The dataset is stored in the `Dataset/` folder of this repository.
-- **Content:** The data contains transactional e-commerce records, including order details, product information, customer data, and sales metrics.
+### 🟢 Python Analysis Pipeline
+- 📅 Auto date parsing and time-series features
+- 🧹 Duplicate removal and missing-value handling
+- 💲 Numeric coercion for sales, profit, quantity
+- 📊 KPI computation (revenue, profit, AOV, margin)
+- 🚩 Outlier detection and flagging
+- 📈 6+ EDA charts saved automatically
 
-> *Note: The dataset is included in the repository for full reproducibility. Refer to the `Dataset/` directory for the raw files.*
-
----
-
-## 📂 Repository Structure
-E-Commerce-Sales/
-│
-├── Dataset/ # Raw data files used for the analysis
-├── analysis_output/ # Cleaned data, charts, and exported results from Python
-├── E-Commerce.py # Python script: cleaning, EDA, and analysis
-├── E-Commerce.pbix # Power BI dashboard file
-├── tempCodeRunnerFile.py # Auto-generated temp file (can be ignored)
-└── README.md # Project documentation 
-
-| File / Folder | Description |
-| :--- | :--- |
-| `Dataset/` | Contains the source data used across the project. |
-| `analysis_output/` | Outputs generated by the Python script (cleaned datasets, visualizations, summary tables). |
-| `E-Commerce.py` | The core Python pipeline for data processing and exploratory analysis. |
-| `E-Commerce.pbix` | The interactive Power BI dashboard for visual storytelling. |
+### 🔵 Power BI Dashboard
+- 📌 KPI cards (Revenue, Orders, AOV, Profit)
+- 📉 Time-series sales trends
+- 🏆 Top products & categories
+- 🌍 Regional performance breakdown
+- 🎛️ Interactive slicers for custom exploration
 
 ---
 
-## 🛠️ Tools & Technologies
+## 🛠️ Installation
 
-| Category | Tools Used |
-| :--- | :--- |
-| **Programming** | Python |
-| **Data Manipulation** | Pandas, NumPy |
-| **Visualization (Python)** | Matplotlib / Seaborn *(as used in script)* |
-| **Business Intelligence** | Power BI |
-| **Environment** | Jupyter / VS Code |
+### 1. Clone the Repository
 
----
-
-## 🔄 Analysis Workflow
-
-The project follows a structured, end-to-end analytics pipeline:
-
-**1. Data Loading & Inspection**
-- Imported the raw dataset and performed an initial structural review (shape, data types, missing values).
-
-**2. Data Cleaning & Preprocessing**
-- Handled missing values, removed duplicates, corrected data types, and standardized fields.
-- Ensured the dataset was analysis-ready and consistent.
-
-**3. Exploratory Data Analysis (EDA)**
-- Analyzed sales trends over time, product performance, and customer distributions.
-- Generated summary statistics and visualizations to surface patterns and outliers.
-
-**4. Feature Engineering & Aggregation**
-- Created derived metrics (e.g., revenue, profit, order-level aggregates) to support deeper analysis.
-
-**5. Visualization & Reporting**
-- Exported key insights and charts to `analysis_output/`.
-- Built a dynamic Power BI dashboard for interactive exploration.
-
----
-
-## 💡 Key Insights
-
-> *The following represent the analytical themes explored in this project. For exact figures and charts, please refer to the `analysis_output/` folder and the Power BI dashboard.*
-
-- **Sales Trends:** Identified peak sales periods and seasonal patterns to support inventory and marketing planning.
-- **Product Performance:** Segmented products by revenue and volume to highlight top sellers and slow-moving items.
-- **Customer Segmentation:** Analyzed purchasing behavior to identify high-value customer groups.
-- **Regional Contribution:** Mapped revenue distribution across regions to reveal key markets.
-- **Profitability Analysis:** Highlighted margin differences across categories, flagging areas for cost optimization.
-
----
-
-## 📈 Power BI Dashboard
-
-The `E-Commerce.pbix` file contains an **interactive dashboard** that allows users to explore the data dynamically. It is designed to provide a clear, executive-level view of business performance.
-
-**Dashboard Highlights:**
-- KPI cards for total revenue, orders, and average order value
-- Time-series trends for sales performance
-- Product and category breakdowns
-- Regional and customer-level filtering
-- Interactive slicers for custom exploration
-
-> **To view the dashboard:** Open `E-Commerce.pbix` using **Power BI Desktop** (free). No additional setup is required.
-
----
-
-## 🚀 How to Use
-
-**1. Clone the repository**
 git clone https://github.com/Abdalla820/E-Commerce-Sales.git
 cd E-Commerce-Sales
-2. Run the Python analysis
 
+2. Install Dependencies
 pip install pandas numpy matplotlib seaborn
+
+3. Requirements
+Python 3.8+
+
+pandas
+
+numpy
+
+matplotlib
+
+seaborn
+
+Power BI Desktop (free) — to open the .pbix dashboard
+
+🚀 Usage
+Basic Run
+bash
 python E-Commerce.py
-3. Explore the dashboard
+Custom File Path
+bash
+python E-Commerce.py path/to/your/data.csv
 
-Open E-Commerce.pbix in Power BI Desktop.
+Folder Structure
 
-Review the generated outputs in analysis_output/.
+📦 E-Commerce-Sales
+ ┣ 📜 E-Commerce.py
+ ┣ 📜 E-Commerce.pbix
+ ┣ 📜 E-Commerce.pptx 
+ ┣ 📂 Dataset
+ ┃ ┗ 📄 ecommerce_sales.csv
+ ┣ 📂 analysis_output
+ ┃ ┣ 📄 cleaned_ecommerce_data.csv   ← generated
+ ┃ ┣ 📄 summary_by_product.csv       ← generated
+ ┃ ┣ 📄 summary_by_category.csv      ← generated
+ ┃ ┣ 📄 summary_monthly.csv          ← generated
+ ┃ ┗ 📄 *.png                        ← generated charts
+ ┗ 📄 README.md                      ← this file
 
-🌐 Connect with Me
-Abdalla Mohamed Farouk Ibrahim — Data Analyst Engineer
+🧠 How It Works
 
-<p align="left"> <a href="https://linkedin.com/in/abdalla-mohamed-farouk" target="_blank"> <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/> </a> <a href="https://github.com/Abdalla820" target="_blank"> <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/> </a> <a href="mailto:abdallamohamed8354@gmail.com"> <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"/> </a> </p>
-📧 Email: abdallamohamed8354@gmail.com
-💼 LinkedIn: linkedin.com/in/abdalla-mohamed-farouk
-🐙 GitHub: github.com/Abdalla820
+📥 Step 1 — Load & Inspect
+Reads the CSV/Excel file using pandas.
 
-<p align="center"> <i>✨ "Discipline == Success" ✨</i> </p> 
+Prints shape, dtypes, missing %, and duplicate count.
+
+Standardizes column names for consistency.
+
+🧹 Step 2 — Clean the Data
+Issue	Action
+Duplicate rows	Remove
+Missing numeric values	Median imputation
+Missing categorical values	Fill with "Unknown"
+Invalid dates	Coerce to NaT
+Non-numeric sales fields	Coerce to NaN → median
+
+⚙️ Step 3 — Feature Engineering
+Extracts Year, Month, Quarter, Day of Week
+
+Computes Profit Margin and Unit Price
+
+Creates time-series groupings for trends
+
+📊 Step 4 — KPIs & Statistics
+Calculates: Total Revenue, Total Profit, Total Orders, AOV, Avg Margin
+
+Prints plain-English summary of business performance
+
+📈 Step 5 — Visualize
+Generates a set of charts saved to analysis_output/:
+
+Monthly sales trend
+
+Top 10 products by revenue
+
+Sales by category
+
+Regional performance
+
+Profit distribution
+
+Correlation heatmap
+
+💾 Step 6 — Output
+Saves cleaned_ecommerce_data.csv
+
+Saves summary tables for Power BI
+
+Exports all charts as .png
+
+📊 Sample Output
+============================================================
+  E-COMMERCE SALES ANALYSIS — START
+============================================================
+[INFO] Loading dataset: Dataset/ecommerce_sales.csv
+[INFO] Loaded shape: (9994, 21)
+[INFO] Removed 0 duplicate rows
+[INFO] Cleaned shape: (9994, 25)
+
+===== KEY PERFORMANCE INDICATORS =====
+         total_revenue: 2,297,200.86
+          total_profit: 286,397.02
+          total_orders: 5,009
+        avg_order_value: 458.61
+       avg_profit_margin: 0.12
+
+[INFO] Saved chart: analysis_output/01_monthly_sales_trend.png
+[INFO] Saved chart: analysis_output/02_top_products.png
+[INFO] Saved chart: analysis_output/03_sales_by_category.png
+[INFO] Saved chart: analysis_output/04_sales_by_region.png
+[INFO] Saved chart: analysis_output/05_profit_distribution.png
+[INFO] Saved chart: analysis_output/06_correlation_heatmap.png
+[INFO] Saved cleaned data: analysis_output/cleaned_ecommerce_data.csv
+[INFO] Exported summary tables for Power BI.
+
+============================================================
+  PIPELINE COMPLETED SUCCESSFULLY ✅
+============================================================
+🎯 Key Design Decisions
+✅ Principle	💡 Why
+Clean before analyzing	Garbage in → garbage out
+Preserve real outliers	High-value orders are real, not errors
+Median for numerics	Robust to skew in sales data
+Separate BI exports	Power BI loads faster with summary tables
+Modular functions	Each step is reusable and testable
+📁 Output Files
+📄 File	📝 Description
+cleaned_ecommerce_data.csv	Cleaned dataset ready for analysis
+summary_by_product.csv	Revenue per product
+summary_by_category.csv	Sales & profit per category
+summary_monthly.csv	Monthly sales totals
+*.png	All EDA visualizations
+E-Commerce.pbix	Interactive Power BI dashboard
+🧰 Tech Stack
+<div align="center">
+https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white
+https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white
+https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white
+https://img.shields.io/badge/Matplotlib-11557c?style=flat-square&logo=python&logoColor=white
+https://img.shields.io/badge/Seaborn-3776AB?style=flat-square&logo=python&logoColor=white
+https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black
+
+</div>
+🤝 Contributing
+Contributions are welcome! Feel free to:
+
+🍴 Fork the repository
+
+🌿 Create a feature branch
+
+💾 Commit your changes
+
+🚀 Push and open a Pull Request
+
+📜 License
+This project is licensed under the MIT License — free to use and modify.
+
+📧 Contact
+<div align="center">
+Abdalla Mohamed Farouk
+
+https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white
+https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white
+https://img.shields.io/badge/GitHub-100000?style=flat-square&logo=github&logoColor=white
+
+</div>
+<div align="center">
+⭐ If you found this project useful, please give it a star!
+Made with ❤️ and Python
+
+</div>
