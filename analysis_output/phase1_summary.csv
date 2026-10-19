@@ -1,0 +1,7 @@
+Test,Question,p-value,Effect size,Decision
+t-test,Order value: high vs low discount,2.5810432891997345e-12,d = -0.20,REJECT H0
+t-test,Profit margin: high vs low discount,0.8820561267510807,d = -0.00,fail to reject H0
+ANOVA,Order value across regions,0.025698860430767145,eta2 = 0.0019,REJECT H0
+Chi-square,Category x Payment Mode,0.23035844757914706,V = 0.046,fail to reject H0
+Chi-square,Region x Payment Mode,0.9910270223550454,V = 0.015,fail to reject H0
+Chi-square,Order Value Tier x Payment Mode,0.5989172181251246,V = 0.023,fail to reject H0
