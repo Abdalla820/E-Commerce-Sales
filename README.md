@@ -114,7 +114,6 @@ python analysis_simple.py path/to/your/data.csv path/to/output_folder
 📦 E-Commerce-Sales
  ┣ 📜 E-Commerce.py                  ← cleaning, EDA, KPIs, hypothesis tests and forecasting
  ┣ 📜 E-Commerce.pbix
- ┣ 📜 E-Commerce.pptx
  ┣ 📂 Dataset
  ┃ ┗ 📄 Ecommerce_Sales_Data_2024_2025.csv
  ┣ 📂 analysis_output
