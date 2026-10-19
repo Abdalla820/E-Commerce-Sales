@@ -112,21 +112,16 @@ python analysis_simple.py path/to/your/data.csv path/to/output_folder
 
 ```text
 📦 E-Commerce-Sales
- ┣ 📜 E-Commerce.py                  ← cleaning, EDA and KPIs
- ┣ 📜 analysis_simple.py             ← hypothesis tests and forecasting
+ ┣ 📜 E-Commerce.py                  ← cleaning, EDA, KPIs, hypothesis tests and forecasting
  ┣ 📜 E-Commerce.pbix
  ┣ 📜 E-Commerce.pptx
  ┣ 📂 Dataset
  ┃ ┗ 📄 Ecommerce_Sales_Data_2024_2025.csv
  ┣ 📂 analysis_output
  ┃ ┣ 📄 cleaned_ecommerce_data.csv   ← generated
- ┃ ┣ 📄 summary_by_product.csv       ← generated
- ┃ ┣ 📄 summary_by_category.csv      ← generated
- ┃ ┣ 📄 summary_monthly.csv          ← generated
- ┃ ┣ 📄 phase2_summary.csv           ← generated
- ┃ ┣ 📄 phase3_metrics.csv           ← generated
- ┃ ┣ 📄 phase3_future_forecast.csv   ← generated
- ┃ ┣ 📄 phase3_chart_data.csv        ← generated
+ ┃ ┣ 📄 phase1_summary.csv           ← generated
+ ┃ ┣ 📄 phase2_metrics.csv           ← generated
+ ┃ ┣ 📄 phase2_future_forecast.csv   ← generated
  ┃ ┗ 📄 *.png                        ← generated charts
  ┗ 📄 README.md                      ← this file
 ```
@@ -164,7 +159,7 @@ python analysis_simple.py path/to/your/data.csv path/to/output_folder
 
 ### 📈 Step 5: Visualize
 
-Generates a set of charts saved to `analysis_output/`:
+Generates a set of charts :
 
 1. Monthly sales trend
 2. Top 10 products by revenue
@@ -175,15 +170,12 @@ Generates a set of charts saved to `analysis_output/`:
 
 ### 💾 Step 6: Output
 
-- Saves `cleaned_ecommerce_data.csv`
 - Saves summary tables for Power BI
 - Exports all charts as `.png`
 
 ---
 
 ## 🧪 Statistical Analysis & Forecasting
-
-`analysis_simple.py` goes beyond descriptive analysis and answers *why* and *what's next*. All tests use a significance level of **α = 0.05**.
 
 ### Phase 2: Hypothesis Tests
 
@@ -267,13 +259,9 @@ Generates a set of charts saved to `analysis_output/`:
 | 📄 File | 📝 Description |
 |:--------|:---------------|
 | `cleaned_ecommerce_data.csv` | Cleaned dataset ready for analysis |
-| `summary_by_product.csv` | Revenue per product |
-| `summary_by_category.csv` | Sales & profit per category |
-| `summary_monthly.csv` | Monthly sales totals |
-| `phase2_summary.csv` | Hypothesis test results (p-values, effect sizes, decisions) |
-| `phase3_metrics.csv` | Forecast model comparison (RMSE, MAPE, interval coverage) |
-| `phase3_future_forecast.csv` | 12-week forecast with 95% bounds |
-| `phase3_chart_data.csv` | History, fit, forecast and band, for the Power BI chart |
+| `phase1_summary.csv` | Hypothesis test results (p-values, effect sizes, decisions) |
+| `phase2_metrics.csv` | Forecast model comparison (RMSE, MAPE, interval coverage) |
+| `phase2_future_forecast.csv` | 12-week forecast with 95% bounds |
 | `*.png` | All EDA and forecast visualizations |
 | `E-Commerce.pbix` | Interactive Power BI dashboard |
 
@@ -326,7 +314,5 @@ This project is licensed under the MIT License, free to use and modify.
 <div align="center">
 
 ⭐ If you found this project useful, please give it a star!
-
-Made with ❤️ and Python
 
 </div>
